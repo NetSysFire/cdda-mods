@@ -1,0 +1,11 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "medieval",
+    "name": "Dark Days Past",
+    "authors": [ "NetSysFire" ],
+    "description": "Full conversion to a medieval setting.",
+    "category": "total_conversion",
+    "dependencies": [ "dda" ]
+  }
+]

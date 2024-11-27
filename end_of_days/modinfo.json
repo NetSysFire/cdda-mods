@@ -1,0 +1,11 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "end_of_days",
+    "name": "End of Days",
+    "authors": [ "NetSysFire" ],
+    "description": "The world has drastically changed for the worse.  The cities are now desolate ruins and everything else is just a barren wasteland.",
+    "category": "total_conversion",
+    "dependencies": [ "dda" ]
+  }
+]

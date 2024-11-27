@@ -1,0 +1,55 @@
+
+[
+  {
+    "type": "mapgen",
+    "method": "json",
+    "om_terrain": "peasant_house_01",
+    "weight": 100,
+    "object": {
+      "rows": [
+        "        ,,,             ",
+        "        ,,,             ",
+        "     |--- ---|          ",
+        "     |.......|          ",
+        "     |.......|          ",
+        "     |.......|          ",
+        "     |.......|          ",
+        "     |-------|          ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        "
+      ],
+      "terrain": {
+        " ": "t_region_groundcover_urban",
+        ".": "t_floor_primitive",
+        ",": [ "t_dirt", "t_grass_dead", [ "t_railroad_rubble", 2 ] ],
+        "-": "t_wall_wattle",
+        "|": "t_wall_wattle"
+      }
+    }
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "peasant_house_01" ],
+    "copy-from": "generic_city_house"
+  },
+  {
+    "type": "city_building",
+    "id": "peasant_house_01",
+    "locations": [ "land" ],
+    "overmaps": [ { "point": [ 0, 0, 0 ], "overmap": "peasant_house_01_north" } ]
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "type": "mapgen",
+    "method": "json",
+    "nested_mapgen_id": "fertile_patch",
+    "object": {
+      "mapgensize": [ 3, 3 ],
+      "terrain": { " ": [ "t_dirt_fertile", "t_null" ] },
+      "flags": [ "ALLOW_TERRAIN_UNDER_OTHER_DATA" ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "om_terrain": [ "fertile_soil" ],
+    "weight": 500,
+    "object": {
+      "predecessor_mapgen": "field",
+      "rows": [
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "         - --           ",
+        "        -----           ",
+        "         ----           ",
+        "        ----            ",
+        "        -----           ",
+        "       ------           ",
+        "          -             ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        "
+      ],
+      "flags": [ "ALLOW_TERRAIN_UNDER_OTHER_DATA" ],
+      "nested": { "-": { "chunks": [ [ "fertile_patch", 45 ], [ "null", 55 ] ] } }
+    }
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "mx_toxic_pond",
+    "type": "map_extra",
+    "name": { "str": "Poisonous pond" },
+    "description": "Polluted water forming a pond, from which noxious gases rise.",
+    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_toxic_pond" },
+    "sym": "p",
+    "color": "magenta",
+    "autonote": true,
+    "flags": [ "MAN_MADE", "CLASSIC", "APOCALPYTIC" ]
+  }
+]

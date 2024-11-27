@@ -1,0 +1,38 @@
+[
+  {
+    "type": "mapgen",
+    "method": "json",
+    "update_mapgen_id": "mx_toxic_pond",
+    "object": {
+      "rows": [
+        "                        ",
+        "                        ",
+        "             -          ",
+        "         -- ---         ",
+        "        --------        ",
+        "         ------         ",
+        "           ---          ",
+        "             -          ",
+        "            --          ",
+        "         - -----        ",
+        "        ---------       ",
+        "         ---------      ",
+        "        ---- ----       ",
+        "        ----------      ",
+        "       -----------      ",
+        "   -- -----------       ",
+        "   ------  -----        ",
+        "   - ----  ---          ",
+        "      --                ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        "
+      ],
+      "fields": { "-": [ { "field": "fd_gas_vent", "x": 0, "y": 0, "intensity": 3, "age": 0 } ] },
+      "flags": [ "ALLOW_TERRAIN_UNDER_OTHER_DATA" ],
+      "terrain": { "-": [ [ "t_sewage", 1 ], [ "t_region_groundcover", 2 ] ] }
+    }
+  }
+]

@@ -1,0 +1,161 @@
+[
+  {
+    "type": "overmap_terrain",
+    "copy-from": "forest",
+    "id": "forest",
+    "name": "dead forest",
+    "sym": "F",
+    "color": "brown",
+    "see_cost": "spaced_high"
+  },
+  {
+    "type": "overmap_terrain",
+    "copy-from": "forest_water",
+    "id": "forest_water",
+    "name": "ashen swamp",
+    "sym": "F",
+    "color": "dark_gray",
+    "see_cost": "spaced_high"
+  },
+  {
+    "type": "overmap_terrain",
+    "copy-from": "forest_thick",
+    "id": "forest_thick",
+    "name": "dead forest",
+    "sym": "F",
+    "color": "brown",
+    "see_cost": "spaced_high"
+  },
+  {
+    "type": "overmap_terrain",
+    "copy-from": "forest_trail",
+    "id": "forest_trail",
+    "name": "forest trail",
+    "color": "brown"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "fertile_soil",
+    "name": "fertile soil",
+    "sym": ".",
+    "color": "light_green",
+    "see_cost": "none",
+    "flags": [ "RISK_LOW", "SOURCE_FARMING" ]
+  },
+  {
+    "type": "overmap_special",
+    "id": "fertile_soil",
+    "overmaps": [ { "point": [ 0, 0, 0 ], "overmap": "fertile_soil_north" } ],
+    "locations": [ "land" ],
+    "occurrences": [ 1, 8 ],
+    "flags": [ "CLASSIC", "WILDERNESS", "APOCALYPTIC" ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "farmfaction_1", "farmfaction_2", "farmfaction_3", "farmfaction_4", "farmfaction_5", "farmfaction_6" ],
+    "name": "farm faction (name WIP)",
+    "sym": "#",
+    "color": "green",
+    "see_cost": "medium",
+    "flags": [ "RISK_LOW", "SOURCE_FARMING" ]
+  },
+  {
+    "type": "overmap_special",
+    "id": "farmfaction_hq",
+    "overmaps": [
+      { "point": [ 0, 0, 0 ], "overmap": "farmfaction_1_north" },
+      { "point": [ 1, 0, 0 ], "overmap": "farmfaction_2_north" },
+      { "point": [ 2, 0, 0 ], "overmap": "farmfaction_3_north" },
+      { "point": [ 0, 1, 0 ], "overmap": "farmfaction_4_north" },
+      { "point": [ 1, 1, 0 ], "overmap": "farmfaction_5_north" },
+      { "point": [ 2, 1, 0 ], "overmap": "farmfaction_6_north" }
+    ],
+    "locations": [ "land" ],
+    "occurrences": [ 1, 4 ],
+    "city_distance": [ 30, -1 ],
+    "flags": [ "SAFE_AT_WORLDGEN", "GLOBALLY_UNIQUE", "APOCALYPTIC" ]
+  },
+  {
+    "type": "overmap_terrain",
+    "abstract": "generic_lake",
+    "copy-from": "generic_water",
+    "name": "lake bed",
+    "sym": "#",
+    "color": "dark_gray",
+    "see_cost": "full_high",
+    "flags": [ "NO_ROTATE", "LAKE" ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "lake_shore",
+    "copy-from": "generic_lake",
+    "name": "lake bed shore",
+    "color": "light_gray",
+    "delete": { "flags": [ "LAKE" ] },
+    "extend": { "flags": [ "LAKE_SHORE", "IGNORE_ROTATION_FOR_ADJACENCY" ] },
+    "extras": "lake_shore",
+    "mapgen": [ { "method": "builtin", "name": "lake_shore" } ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "lake_surface",
+    "copy-from": "generic_lake"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "lake_water_cube",
+    "copy-from": "generic_lake",
+    "name": "lake"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "lake_bed",
+    "copy-from": "generic_lake",
+    "name": "lake bed"
+  },
+  {
+    "type": "overmap_terrain",
+    "abstract": "generic_river",
+    "copy-from": "generic_water",
+    "name": "riverbed",
+    "sym": "R",
+    "color": "dark_gray",
+    "see_cost": "none",
+    "flags": [ "RIVER", "NO_ROTATE" ]
+  },
+  {
+    "type": "overmap_terrain",
+    "abstract": "generic_river_bank",
+    "copy-from": "generic_river",
+    "name": "riverbed shore",
+    "color": "light_gray"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "river_center",
+    "copy-from": "generic_river",
+    "mapgen": [ { "method": "builtin", "name": "river_center" } ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "river",
+    "copy-from": "generic_river_bank",
+    "extras": "river",
+    "mapgen": [ { "method": "builtin", "name": "river_straight" } ],
+    "delete": { "flags": [ "NO_ROTATE" ] }
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "river_c_not_ne", "river_c_not_nw", "river_c_not_se", "river_c_not_sw" ],
+    "copy-from": "generic_river_bank",
+    "extras": "river",
+    "mapgen": [ { "method": "builtin", "name": "river_curved_not" } ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "river_ne", "river_nw", "river_se", "river_sw" ],
+    "extras": "river",
+    "copy-from": "generic_river_bank",
+    "mapgen": [ { "method": "builtin", "name": "river_curved" } ]
+  }
+]

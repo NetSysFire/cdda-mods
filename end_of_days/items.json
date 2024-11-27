@@ -1,0 +1,34 @@
+[
+  {
+    "type": "AMMO",
+    "id": "material_soil",
+    "category": "spare_parts",
+    "price": 0,
+    "price_postapoc": 0,
+    "name": { "str_sp": "dusty soil" },
+    "symbol": "=",
+    "color": "brown",
+    "description": "Some corrupted soil.  Barely more than dust.",
+    "material": [ "soil" ],
+    "volume": "5 L",
+    "weight": "6500 g",
+    "ammo_type": "components",
+    "stack_size": 1
+  },
+  {
+    "type": "AMMO",
+    "id": "material_soil_fertile",
+    "category": "spare_parts",
+    "price": 0,
+    "price_postapoc": 5000,
+    "name": { "str_sp": "fertile soil" },
+    "symbol": "=",
+    "color": "magenta",
+    "description": "Slightly damp and loamy.  Its earthen smell stirs instincts long buried.",
+    "material": [ "soil" ],
+    "volume": "500 ml",
+    "weight": "650 g",
+    "ammo_type": "components",
+    "stack_size": 1
+  }
+]

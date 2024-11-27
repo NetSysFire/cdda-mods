@@ -1,0 +1,36 @@
+[
+  {
+    "type": "terrain",
+    "id": "t_rock_immutable",
+    "name": "immutable rock",
+    "description": "Undiggable rock.  Impossible to get through.",
+    "symbol": "#",
+    "color": "black",
+    "move_cost": 0,
+    "coverage": 100,
+    "flags": [ "NOITEM" ]
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "om_terrain": [ "rock_border_immutable" ],
+    "object": { "fill_ter": "t_rock_immutable" }
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "rock_border_immutable",
+    "name": "immutable rock border",
+    "vision_levels": "always_full",
+    "sym": "#",
+    "color": "white",
+    "flags": [ "NO_ROTATE" ],
+    "see_cost": "opaque"
+  },
+  {
+    "type": "overmap_special",
+    "id": "world",
+    "overmaps": [ { "point": [ 0, 0, 0 ], "overmap": "rock_border_immutable" } ],
+    "locations": [ "land" ],
+    "occurrences": [ 0, 0 ]
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "type": "terrain",
+    "id": "t_dirt",
+    "name": "cracked soil",
+    "description": "Infertile and dusty, this bit of dirt can no longer support life.",
+    "symbol": ".",
+    "color": "brown",
+    "connect_groups": "DIRT",
+    "connects_to": [ "DIRT", "CLAY", "SAND", "MUD", "DIRTMOUND", "CLAYMOUND", "SANDMOUND", "SANDGLASS", "CONCRETE" ],
+    "move_cost": 2,
+    "flags": [ "TRANSPARENT", "DIGGABLE", "FLAT" ],
+    "bash": { "sound": "thump", "ter_set": "t_null", "str_min": 50, "str_max": 100, "str_min_supported": 100, "bash_below": true }
+  },
+  {
+    "type": "terrain",
+    "id": "t_dirt_fertile",
+    "name": "fertile soil",
+    "description": "This patch of dirt has a noticably richer color and shape than the surrounding patches of dust.  A precious marvel, yet uncorrupted.",
+    "symbol": ".",
+    "color": "magenta",
+    "connect_groups": "DIRT",
+    "connects_to": [ "DIRT", "CLAY", "SAND", "MUD", "DIRTMOUND", "CLAYMOUND", "SANDMOUND", "SANDGLASS", "CONCRETE" ],
+    "move_cost": 2,
+    "flags": [ "TRANSPARENT", "FLAT", "PLOWABLE" ],
+    "bash": { "sound": "thump", "ter_set": "t_null", "str_min": 50, "str_max": 100, "str_min_supported": 100, "bash_below": true }
+  },
+  {
+    "type": "terrain",
+    "id": "t_grass_dead",
+    "name": "dead grass",
+    "description": "Some withered, dry grass.",
+    "looks_like": "t_grass",
+    "symbol": ".",
+    "color": "light_gray",
+    "move_cost": 2,
+    "flags": [ "TRANSPARENT", "DIGGABLE", "FLAT" ],
+    "bash": { "ter_set": "t_null", "str_min": 50, "str_max": 400, "str_min_supported": 100, "bash_below": true }
+  },
+  {
+    "type": "terrain",
+    "id": "t_moss",
+    "name": "moss",
+    "looks_like": "t_grass",
+    "description": "A patch of slightly moist, spongy moss.  While still alive, barely so, it looks considerably wilted.",
+    "symbol": ".",
+    "color": "light_green",
+    "move_cost": 2,
+    "flags": [ "TRANSPARENT", "DIGGABLE", "FLAT" ],
+    "bash": { "sound": "thump", "ter_set": "t_null", "str_min": 40, "str_max": 100, "str_min_supported": 100, "bash_below": true }
+  },
+  {
+    "type": "terrain",
+    "id": "t_deadshrub",
+    "name": "dead shrub",
+    "description": "Now withered and dead, this former shrub is little more than some twigs sticking out of the ground.",
+    "symbol": "#",
+    "color": "brown",
+    "move_cost": 8,
+    "coverage": 40,
+    "flags": [ "TRANSPARENT", "CONTAINER", "FLAMMABLE_ASH", "THIN_OBSTACLE", "PLACE_ITEM", "SHRUB", "SHORT" ],
+    "bash": {
+      "str_min": 4,
+      "str_max": 30,
+      "sound": "crunch.",
+      "sound_fail": "brush.",
+      "ter_set": "t_dirt",
+      "items": [ { "item": "twig", "prob": 80, "count": [ 1, 5 ] } ]
+    }
+  },
+  {
+    "//": "Taken from desert_region",
+    "type": "terrain",
+    "id": "t_mudcrack",
+    "name": "mudcrack",
+    "description": "Large continuous cracks mark what once was a bottom of a body of water.  With the proper tools, you could extract clay from here.",
+    "symbol": ".",
+    "looks_like": "t_dirt",
+    "color": "brown",
+    "move_cost": 2,
+    "flags": [ "TRANSPARENT", "DIGGABLE", "FLAT" ],
+    "bash": { "sound": "thump", "ter_set": "t_null", "str_min": 50, "str_max": 100, "str_min_supported": 100, "bash_below": true }
+  },
+  {
+    "type": "furniture",
+    "id": "f_deadflower",
+    "name": "withered flower",
+    "description": "Its dried out leaves and stem limply waft in the stale breeze.",
+    "symbol": "f",
+    "color": "light_gray",
+    "move_cost_mod": 0,
+    "required_str": -1,
+    "flags": [ "TRANSPARENT", "TINY", "FLAMMABLE_ASH", "NOCOLLIDE", "FLOWER" ],
+    "bash": {
+      "str_min": 2,
+      "str_max": 6,
+      "sound": "crunch.",
+      "sound_fail": "whish.",
+      "items": [ { "item": "withered", "count": [ 0, 1 ] } ]
+    }
+  }
+]

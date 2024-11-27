@@ -1,0 +1,11 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "immutable_wall",
+    "name": "Immutable Border Wall",
+    "authors": [ "NetSysFire" ],
+    "description": "Only affects the Bordered scenario. This will make the border impossible to mine.",
+    "category": "misc_additions",
+    "dependencies": [ "dda" ]
+  }
+]
